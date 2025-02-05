@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+    <h1>My Projects</h1>
+{% endblock page_header %}
+
+{% block content %}
+    <ul class="list-group border-bottom pb-2 mb-4">
+            <li class="list-group-item border-0">
+                <a href="https://github.com/edsumabat/my-landing-page" class="list-group-item list-group-item-action">My portfolio page / homepage. (This website)</a>
+            </li>
+            <li class="list-group-item border-0">
+                <a href="https://github.com/edsumabat/my-log-and-blog" class="list-group-item list-group-item-action">Blog and Log, a secure, multi-user blogging website for your own interests.</a>
+            </li>
+    </ul>
+{% endblock content%}
