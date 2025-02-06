@@ -1,35 +1,34 @@
 {% extends 'blog/base.html' %}
 
 {% block page_header %}
-    <div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="p-3 mb-4 bg-dark text-white border-dark rounded-3">
         <div class="container-fluid py-4">
             <h5 class="display-7">About me.</h5>
 
             <p class="lead">Hello everyone! I am Engr. Edreinne Dizon Sumabat, ECT. 
                 I graduated with an Electronics and Communications Engineering degree, and recently 
                 passed the ECELE and ranked third in ECTLE (October 2024). I am 
-                currently  studying for my CCNA certification and furthering my 
+                currently studying for my CCNA certification and furthering my 
                 skills as a developer at the same time. I am furthering my skills in these areas 
                 because my passion is towards IT and development. I am looking forward to 
                 applying and contributing my skills in the IT industry.
 
                 This website is to document my future projects.
             </p>
-            <a class="btn btn-primary btn-lg mt-1"
-                href="{% url 'blog:projects' %}">Show projects &raquo;</a>
+            <a class="btn btn-primary btn-lg mt-1" href="{% url 'blog:projects' %}">Show projects &raquo;</a>
         </div>
     </div>
 {% endblock page_header %}
-    
+
 
 {% block content %}
     {% for post in posts %}
-    <div class="card mb-3">
+    <div class="card mb-3 bg-secondary text-light">
         <h5 class="card-header">
            {{ post.title }} ({{ post.published_date}})
         </h5>
-         <div class="card-body">
-           <p class="card-text">{{ post.text }}</p>
+         <div class="card-body bg-dark rounded-1">
+           <p class="card-text text-light">{{ post.text }}</p>
          </div>
    </div>
     {% endfor %}

@@ -2,16 +2,31 @@
 {% load django_bootstrap5 %}
 
 {% block page_header %}
-    <h1>My Projects</h1>
+    <div class="p-3 bg-dark text-white border-dark rounded-3">
+        <div class="container-fluid py-4">
+            <h1 class="display-3">My Projects</h1>
+        </div>
+    </div>
 {% endblock page_header %}
 
 {% block content %}
-    <ul class="list-group border-bottom pb-2 mb-4">
-            <li class="list-group-item border-0">
-                <a href="https://github.com/edsumabat/my-landing-page" class="list-group-item list-group-item-action">My portfolio page / homepage. (This website)</a>
-            </li>
-            <li class="list-group-item border-0">
-                <a href="https://github.com/edsumabat/my-log-and-blog" class="list-group-item list-group-item-action">Blog and Log, a secure, multi-user blogging website for your own interests.</a>
-            </li>
-    </ul>
-{% endblock content%}
+    <div class="container">
+        <div class="card mb-3 bg-secondary text-light">
+            <h5 class="card-header">Project Links</h5>
+            <div class="card-body bg-dark rounded-1">
+                <ul class="list-group">
+                    <li class="list-group-item bg-dark border-dark">
+                        <a href="https://github.com/edsumabat/my-landing-page" class="list-group-item list-group-item-action bg-secondary text-light">
+                            My portfolio page / homepage. (This website)
+                        </a>
+                    </li>
+                    <li class="list-group-item bg-dark border-0">
+                        <a href="https://edsumabat2.pythonanywhere.com/" class="list-group-item list-group-item-action bg-secondary text-light">
+                            Blog and Log, a multi-user blog demo.
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

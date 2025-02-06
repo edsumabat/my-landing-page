@@ -9,9 +9,27 @@
   {% bootstrap_css %}
   {% bootstrap_javascript %}
 
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+    .navbar {
+      border-bottom: 1px solid #343a40;
+    }
+    .nav-link {
+      color: rgba(255, 255, 255, 0.75) !important;
+    }
+    .nav-link:hover {
+      color: #ffffff !important;
+    }
+    .border-bottom {
+      border-bottom-color: #343a40 !important;
+    }
+  </style>
 </head>
-<body>
-  <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+<body class="bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'blog:post_list' %}">
         Edreinne's Links</a>
@@ -33,15 +51,12 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'blog:projects' %}">
               My Projects </a></li>
-        </ul> 
-        <!-- End of links on left side of navbar -->
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      </div> <!-- Closes collapsible parts of navbar -->
-
-    </div> <!-- Closes navbar's container -->
-  </nav> <!-- End of navbar -->
-
-  <main class="container">
+  <main class="container text-white">
     <div class="pb-2 mb-2 border-bottom">
       {% block page_header %}{% endblock page_header %}
     </div>
